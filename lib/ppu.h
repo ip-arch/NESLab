@@ -1,4 +1,8 @@
-void waitvblank(void);
+void waitvblank(void) {
+    __asm__("vblank_loop:");
+    __asm__("bit $2002");
+    __asm__("bpl vblank_loop");
+}
 unsigned char scr_x;
 unsigned char scr_y;
 unsigned char ppu_ctrl=0x00;
