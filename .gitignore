@@ -1,0 +1,7 @@
+# Ignore all NES binaries in this directory
+*.nes
+
+# Ignore compiler object files and executables
+*.o
+*.out
+*.exe
